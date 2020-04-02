@@ -9,7 +9,7 @@ export const isValidRomanNumerals = (str) => {
 export const isValidArabicNumerals = (number) => (number > 0 && number < 4000);
 
 export const arabicToRoman = (number) => {
-    if (number < 1 || number > 3999) {
+    if (!isValidArabicNumerals(number)) {
         return '';
     }
 
